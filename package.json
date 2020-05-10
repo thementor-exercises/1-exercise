@@ -1,0 +1,19 @@
+{
+  "name": "nowy",
+  "version": "1.0.0",
+  "description": "nowy projekt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thementor-exercises/1-exercise.git"
+  },
+  "author": "Wojciech Goledzinowski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thementor-exercises/1-exercise/issues"
+  },
+  "homepage": "https://github.com/thementor-exercises/1-exercise#readme"
+}
