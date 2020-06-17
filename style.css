@@ -1,0 +1,48 @@
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p {
+    line-height: 24px;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contener {
+    width: 80vw;
+    margin: 50px auto ;
+    display: flex;
+    flex-wrap: wrap;
+}
+.pierwsza {
+    flex-basis: 20%;
+    text-align: right;
+    padding-right: 5px;
+   
+}
+.druga {
+    flex-basis:60%;
+}
+.trzecia {
+    flex-basis: 5%;
+}
+input{
+    flex-basis: 2%;
+    margin-top: 5px;
+}
+.suma {
+    width: 100%;
+    margin-left: 63%;
+    margin-right: 17%;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: black 1px solid;
+    text-align: right;
+    
+}
+
+.zamowione {
+    font-weight: 800;
+}
