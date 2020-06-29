@@ -1,0 +1,9 @@
+body{
+  font-family: verdana;
+  margin: 1%;
+}
+.classContentRow{
+  background-color: rgb(219, 226, 233);
+  border-radius: 1.5px;
+  padding: 5px;
+}
