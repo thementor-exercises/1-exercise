@@ -1,20 +1,22 @@
 #main {
   width: 500px;
 }
-p {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(214, 214, 214);
-  align-self: flex-start;
-  margin-top: 1px;
-  margin-bottom: 1px;
+.dishname {
+  display: grid;
+  grid-template-columns: 15fr 1fr 1fr;
+  vertical-align: text-top;
+  /* justify-items: center; */
+  align-items: center;
+  background-color: rgb(209, 209, 209);
+  width: 500px;
+  grid-auto-rows: minmax(auto, auto);
+  margin: 0px;
 }
 .price {
-  display: flex;
-  justify-content: flex-end;
-  margin-left: auto;
+  display: grid;
+  text-align: end;
+  justify-items: end;
 }
-.checkbox {
-  display: flex;
-  align-self: center;
+.dishname:nth-child(odd) {
+  background-color: rgb(197, 197, 197);
 }

@@ -4,6 +4,7 @@ const totalCost = [];
 fetch("/salads.json")
   .then((response) => response.json())
   .then((data) => doEverything(data));
+
 function sum(totalCost) {
   let sumValue = totalCost.reduce((a, b) => a + b, 0);
   return sumValue;
@@ -32,14 +33,12 @@ function doEverything(data) {
     const newCheckbox = document.createElement("input");
     const newPrice = document.createElement("p");
     dishName.innerHTML = `${i + 1}. ${data[i]}`;
+    dishName.className = "dishname";
     newCheckbox.id = "checkbox-" + [i + 1];
     newCheckbox.type = "checkbox";
-    newCheckbox.className = "checkbox";
     newCheckbox.addEventListener("change", (e) => newOrderAdded(e));
     newPrice.innerHTML = price[i];
     newPrice.className = "price";
-    document.getElementById("main").append(newPrice);
-    document.getElementById("main").append(newCheckbox);
     dishName.appendChild(newPrice);
     dishName.appendChild(newCheckbox);
     document.getElementById("main").append(dishName);
@@ -56,7 +55,6 @@ function newOrderAdded(e) {
   index = index - 1;
   if (e.target.checked) {
     totalCost.push(parseInt(price[index].replace(/[^\d.-]/g, "")));
-    console.log(totalCost);
     sum(totalCost);
     calculatedValue.innerHTML = "total cost: " + sum(totalCost) + " zł";
   } else {
@@ -64,7 +62,6 @@ function newOrderAdded(e) {
       if (totalCost[i] === parseInt(price[index].replace(/[^\d.-]/g, ""))) {
         totalCost.splice(i, 1);
         i--;
-        console.log(totalCost);
         sum(totalCost);
         calculatedValue.innerHTML = "total cost: " + sum(totalCost) + " zł";
         break;
